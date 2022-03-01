@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Basic example</title>
+</head>
+<body>
+
+  <div id="test-list">
+    <input type="text" class="fuzzy-search" />
+    <ul class="list">
+      <li><p class="name">Guybrush Threepwood</p></li>
+      <li><p class="name">Manny Calavera</p></li>
+      <li><p class="name">Bernard Bernoulli</p></li>
+      <li><p class="name">LeChuck</p></li>
+      <li><p class="name">Elaine Marley-Threepwood</p></li>
+      <li><p class="name">Purple Tentacle</p></li>
+      <li><p class="name">Adrian Ripburger</p></li>
+      <li><p class="name">Bobbin Threadbare</p></li>
+      <li><p class="name">Murray the Demonic Skull</p></li>
+      <li><p class="name">Zak McKracken</p></li>
+    </ul>
+
+    <!-- <ul class="list">
+        <li>
+   
+          <h3 class="name">Jonny Stromberg</h3>
+          <p class="born">1986</p>
+        </li>
+        <li>
+          <h3 class="name">Jonas Arnklint</h3>
+          <p class="born">1985</p>
+        </li>
+        <li>
+          <h3 class="name">Martina Elm</h3>
+          <p class="born">1986</p>
+        </li>
+        <li>
+          <h3 class="name">Gustaf Lindqvist</h3>
+          <p class="born">1983</p>
+        </li>
+      </ul> -->
+       <!-- The innerHTML of children with class="name" becomes this items "name" value -->
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.0.2/list.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.fuzzysearch.js/0.1.0/list.fuzzysearch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.fuzzysearch.js/0.1.0/list.fuzzysearch.js"></script>
+  
+
+  <script>
+    var options = {
+      valueNames: ['name'],
+      plugins: [ ListFuzzySearch() ]
+    };
+
+    var monkeyList = new List('test-list', options);
+  </script>
+</body>
+</html>
+
+
+
